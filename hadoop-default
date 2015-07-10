@@ -1,0 +1,24 @@
+m3.xlarge
+
+Configuration Option	Default Value
+mapreduce.map.java.opts	-Xmx1152m
+mapreduce.reduce.java.opts	-Xmx2304m
+mapreduce.map.memory.mb	1440
+mapreduce.reduce.memory.mb	2880
+yarn.scheduler.minimum-allocation-mb	1440
+yarn.scheduler.maximum-allocation-mb	11520
+yarn.nodemanager.resource.memory-mb	11520
+
+common
+
+c = comtainer = 8
+m = map-memory = 1440
+
+Configuration Option	Default Value
+mapreduce.map.java.opts	-Xmx(0.8m)m
+mapreduce.reduce.java.opts	-Xmx(1.6m)m
+mapreduce.map.memory.mb	m
+mapreduce.reduce.memory.mb	2m
+yarn.scheduler.minimum-allocation-mb	m
+yarn.scheduler.maximum-allocation-mb	m * c
+yarn.nodemanager.resource.memory-mb	m * c

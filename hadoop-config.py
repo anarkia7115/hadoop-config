@@ -2,6 +2,7 @@
 #
 
 import sys;
+import re;
 
 def print_opts(m, c):
 	m_j = int(0.8 * m)
@@ -32,11 +33,21 @@ def main(argv):
 	elif len(argv) == 2:
 		# has map
 		m = argv[1]
+		if "g" in m:
+			m = re.sub("g", "*1024", m)
+		m = eval(m)
+		m = int(m)
 		c = 1
+		c = int(c)
 	elif len(argv) == 3:
 		# has m and c
 		m = argv[1]
+		if "g" in m:
+			m = re.sub("g", "*1024", m)
+		m = eval(m)
+		m = int(m)
 		c = argv[2]
+		c = int(c)
 	
 	print_opts(m, c)
 
