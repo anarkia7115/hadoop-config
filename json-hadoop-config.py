@@ -29,6 +29,8 @@ def print_opts(m, c):
         "\t\t\"yarn.scheduler.maximum-allocation-mb={}\",\n".format(s_max), \
 	"\t\t\"--yarn-key-value\", \n" ,\
         "\t\t\"yarn.nodemanager.resource.memory-mb={}\"\n".format(n_res), \
+	"\t\t\"--mapred-key-value\", \n" ,\
+        "\t\t\"mapreduce.task.timeout=0\"\n", \
         "\t}\n", \
         "]\n"
 
